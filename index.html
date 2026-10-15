@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#06152e">
+<title>KEANU | Cara Menjadi Pro Player ML</title>
+<style>
+:root{--bg:#06101f;--panel:#0b1d36;--panel2:#102746;--blue:#1597ff;--cyan:#59d8ff;--text:#edf6ff;--muted:#a8bfd9;--line:#1d3c60}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(ellipse at 80% 0%,#103a70 0,transparent 38%),var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif;line-height:1.7}
+a{color:inherit;text-decoration:none}
+header{position:sticky;top:0;z-index:10;background:#041022ed;border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}
+.nav{max-width:1100px;margin:auto;padding:14px 22px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.logo{font-weight:900;font-size:1.45rem;letter-spacing:1px;color:white}.logo span{color:var(--blue)}
+nav{display:flex;gap:20px;flex-wrap:wrap}nav a{font-size:.95rem;color:var(--muted)}nav a:hover{color:var(--cyan)}
+.hero{max-width:1100px;margin:auto;padding:65px 22px 52px;display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center}
+.tag{display:inline-block;background:#0874d8;color:#fff;border-radius:20px;padding:4px 12px;font-weight:bold;font-size:.8rem;letter-spacing:.5px}
+h1{font-size:clamp(2.5rem,6vw,4.6rem);line-height:1.03;letter-spacing:-2px;margin:18px 0}
+h1 span{color:var(--blue);text-shadow:0 0 28px #168cff55}
+.hero p{font-size:1.08rem;color:var(--muted);max-width:600px}
+.meta{display:flex;gap:16px;flex-wrap:wrap;color:#b9d2ec;font-size:.88rem;margin-top:24px}
+.hero-art{min-height:300px;border:1px solid #2475b7;border-radius:24px;overflow:hidden;position:relative;background:linear-gradient(140deg,#0b2a50,#07152d 55%,#0c4c85);display:flex;align-items:center;justify-content:center}
+.orb{position:absolute;width:230px;height:230px;border-radius:50%;background:radial-gradient(circle,#37c8ff99,#1475ff20 58%,transparent 70%);filter:blur(2px)}
+.sword{position:absolute;width:7px;height:260px;background:linear-gradient(#c8f7ff,#128aff,#d8faff);transform:rotate(35deg);border-radius:9px;box-shadow:0 0 28px #2bbcff;opacity:.85}
+.shield{position:relative;width:150px;height:170px;display:grid;place-items:center;clip-path:polygon(50% 0,94% 18%,83% 73%,50% 100%,17% 73%,6% 18%);background:linear-gradient(145deg,#7ce7ff,#1263c9 48%,#06152e);filter:drop-shadow(0 0 20px #179bff)}
+.shield strong{font-size:3.3rem;color:white;text-shadow:0 3px 12px #00132e}
+.art-label{position:absolute;bottom:18px;left:20px;right:20px;text-align:center;font-size:.86rem;color:#c7e9ff;letter-spacing:2px}
+main{max-width:1100px;margin:auto;padding:0 22px 60px;display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:30px}
+article,.side-card{background:linear-gradient(160deg,#0b1d36,#07172b);border:1px solid var(--line);border-radius:18px}
+article{padding:30px}
+.intro{font-size:1.06rem;color:#d4e5f7}
+h2{font-size:1.55rem;margin:28px 0 12px}h3{font-size:1.12rem;margin:0 0 6px}
+.tip{display:grid;grid-template-columns:44px 1fr;gap:14px;margin:24px 0}
+.num{height:42px;width:42px;display:grid;place-items:center;background:linear-gradient(135deg,var(--blue),#0754b5);border-radius:13px;font-size:1.1rem;font-weight:900;box-shadow:0 5px 18px #078cff35}
+.tip p{margin:0;color:var(--muted)}
+.callout{margin:28px 0;padding:18px 20px;border:1px solid #168cff;border-radius:14px;background:#08274a;color:#d8efff;font-style:italic}
+.checklist{padding-left:0;list-style:none}.checklist li{margin:10px 0;color:var(--muted)}.checklist li:before{content:"✓";color:var(--cyan);font-weight:bold;margin-right:10px}
+.side-card{padding:20px;margin-bottom:18px}.side-card h3{margin-bottom:12px}.toc{padding-left:20px;color:var(--muted)}.toc li{margin:7px 0}.toc a:hover{color:var(--cyan)}
+.quote{background:linear-gradient(135deg,#0c3b70,#07162c);border-radius:14px;padding:22px;border:1px solid #1a65a4}.quote strong{color:var(--cyan);font-size:1.1rem}
+button{cursor:pointer;border:0;border-radius:10px;padding:11px 15px;font-weight:bold;background:var(--blue);color:#fff}button:hover{filter:brightness(1.15)}.share-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}.secondary{background:#153452;border:1px solid #2c5578}
+footer{border-top:1px solid var(--line);padding:24px 20px;text-align:center;color:var(--muted);font-size:.9rem}footer strong{color:#fff}
+#topBtn{position:fixed;bottom:18px;right:18px;border-radius:50%;width:46px;height:46px;padding:0;font-size:1.2rem;box-shadow:0 5px 20px #0008;display:none}
+@media(max-width:800px){.hero{grid-template-columns:1fr;padding-top:42px}.hero-art{min-height:230px}main{grid-template-columns:1fr}.nav{align-items:flex-start;flex-direction:column}nav{gap:14px}.side{display:grid;grid-template-columns:1fr;}}
+@media(max-width:480px){article{padding:21px}.hero{padding-left:18px;padding-right:18px}main{padding:0 14px 40px}h1{letter-spacing:-1.2px}.meta{gap:9px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="nav">
+    <a class="logo" href="#beranda">♛ <span>KEANU</span></a>
+    <nav aria-label="Navigasi utama">
+      <a href="#beranda">Beranda</a><a href="#artikel">Artikel</a><a href="#tips">Tips &amp; Trik</a><a href="#tentang">Tentang</a>
+    </nav>
+  </div>
+</header>
+<section class="hero" id="beranda">
+  <div>
+    <span class="tag">MOBILE LEGENDS • PANDUAN PEMULA</span>
+    <h1>Cara Menjadi<br><span>Pro Player ML</span></h1>
+    <p>Jago bukan cuma soal banyak menang. Kamu juga perlu latihan yang konsisten, strategi yang matang, kerja sama tim, dan mental yang kuat.</p>
+    <div class="meta"><span>📅 15 Oktober 2026</span><span>✍️ Keanu</span><span>⏱️ 5 menit baca</span></div>
+  </div>
+  <div class="hero-art" role="img" aria-label="Ilustrasi perisai dan pedang bercahaya biru bertema gaming">
+    <div class="orb"></div><div class="sword"></div><div class="shield"><strong>K</strong></div>
+    <div class="art-label">PLAY • LEARN • IMPROVE</div>
+  </div>
+</section>
+<main>
+  <article id="artikel">
+    <p class="intro">Menjadi pro player Mobile Legends: Bang Bang tidak bisa diraih dalam semalam. Kamu harus memahami permainan, memperbaiki kesalahan, dan belajar bekerja sama dengan tim. Berikut beberapa langkah yang bisa kamu mulai dari sekarang.</p>
+    <h2 id="tips">6 Cara Menjadi Pro Player ML</h2>
+    <section class="tip" id="hero"><div class="num">1</div><div><h3>Kuasai Hero dan Role</h3><p>Pilih role yang paling kamu sukai, lalu kuasai beberapa hero di role tersebut. Pelajari skill, combo, kelebihan, kelemahan, serta hero yang menjadi counter. Jangan hanya mengandalkan satu hero karena bisa saja diambil atau terkena ban.</p></div></section>
+    <section class="tip"><div class="num">2</div><div><h3>Latihan Secara Konsisten</h3><p>Buat jadwal latihan yang seimbang dengan sekolah, istirahat, dan kegiatan lain. Gunakan mode latihan atau Classic untuk melatih mekanik, combo, dan positioning. Setelah bermain, pikirkan satu hal yang bisa diperbaiki.</p></div></section>
+    <section class="tip"><div class="num">3</div><div><h3>Pahami Map dan Makro Game</h3><p>Biasakan melihat minimap. Perhatikan posisi lawan, waktu objektif, rotasi, Turtle, dan Lord. Jangan mengejar kill tanpa tujuan—terkadang mengambil turret atau membantu teman jauh lebih menguntungkan.</p></div></section>
+    <section class="tip"><div class="num">4</div><div><h3>Sesuaikan Build dan Emblem</h3><p>Jangan menyalin build secara buta. Sesuaikan item, spell, dan emblem dengan hero, komposisi tim, serta lawan yang dihadapi. Pelajari alasan memilih item agar kamu bisa beradaptasi saat pertandingan berubah.</p></div></section>
+    <section class="tip"><div class="num">5</div><div><h3>Jaga Mental dan Disiplin</h3><p>Tetap tenang saat kalah dan hindari menyalahkan rekan satu tim. Fokus pada keputusan yang bisa kamu kendalikan. Berhenti sejenak jika mulai lelah atau emosi; istirahat juga bagian dari latihan yang baik.</p></div></section>
+    <section class="tip"><div class="num">6</div><div><h3>Bangun Kerja Sama dan Ikuti Turnamen</h3><p>Berlatih bersama teman membantu komunikasi dan koordinasi. Mulailah dari turnamen kecil atau komunitas sekolah untuk mendapat pengalaman. Jika ingin serius, pelajari juga jadwal latihan tim, evaluasi pertandingan, dan sportivitas.</p></div></section>
+    <div class="callout">“Pemain hebat bukan yang tidak pernah kalah, tetapi yang mau belajar dari setiap pertandingan.” — Keanu</div>
+    <h2>Checklist Latihan Harian</h2>
+    <p>Pilih kegiatan yang sudah kamu lakukan hari ini:</p>
+    <ul class="checklist">
+      <li><label><input type="checkbox"> Latihan mekanik dan combo hero</label></li>
+      <li><label><input type="checkbox"> Memperhatikan minimap dan objektif</label></li>
+      <li><label><input type="checkbox"> Mengevaluasi satu kesalahan setelah bermain</label></li>
+      <li><label><input type="checkbox"> Menjaga sikap dan komunikasi dengan tim</label></li>
+      <li><label><input type="checkbox"> Tetap membagi waktu untuk belajar dan istirahat</label></li>
+    </ul>
+    <h2>Kesimpulan</h2>
+    <p>Menjadi pro player membutuhkan proses panjang, latihan terarah, kemampuan beradaptasi, dan kerja sama. Nikmati prosesnya, tetap sportif, dan jangan mengorbankan kesehatan atau kewajiban sekolah demi bermain.</p>
+    <div class="share-row">
+      <button onclick="window.print()">🖨️ Cetak artikel</button>
+      <button class="secondary" onclick="shareArticle()">↗ Bagikan artikel</button>
+    </div>
+    <p id="shareStatus" aria-live="polite" style="color:var(--cyan);font-size:.9rem"></p>
+  </article>
+  <aside class="side">
+    <div class="side-card"><h3>☰ Daftar Isi</h3><ol class="toc"><li><a href="#hero">Kuasai Hero dan Role</a></li><li><a href="#tips">Enam cara menjadi pro</a></li><li><a href="#tentang">Tentang blog Keanu</a></li></ol></div>
+    <div class="quote"><strong>LEVEL UP YOUR GAME</strong><p>Latihan hari ini adalah bekal untuk pertandingan esok. Main cerdas, tetap sportif.</p><span style="color:var(--muted)">— Keanu</span></div>
+    <div class="side-card" id="tentang"><h3>👑 Tentang KEANU</h3><p style="color:var(--muted);margin-bottom:0">Blog gaming sederhana berisi panduan, strategi, dan tips Mobile Legends untuk pemain yang ingin terus berkembang.</p></div>
+    <div class="side-card"><h3>🔎 Cari di artikel</h3><form onsubmit="searchArticle(event)"><input id="searchInput" type="search" placeholder="Contoh: minimap" style="width:100%;padding:11px;border-radius:9px;border:1px solid var(--line);background:#06152a;color:white"><button style="margin-top:10px;width:100%">Cari teks</button></form><p id="searchStatus" aria-live="polite" style="color:var(--cyan);font-size:.88rem"></p></div>
+  </aside>
+</main>
+<footer><strong>♛ KEANU</strong><br>Play • Learn • Improve • Be Pro<br>© 2026 Blog Keanu</footer>
+<button id="topBtn" aria-label="Kembali ke atas" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+<script>
+function shareArticle(){const text='KEANU — Cara Menjadi Pro Player ML';if(navigator.share){navigator.share({title:document.title,text:text,url:location.href}).catch(()=>{});}else if(navigator.clipboard){navigator.clipboard.writeText(location.href).then(()=>document.getElementById('shareStatus').textContent='Link halaman disalin.').catch(()=>document.getElementById('shareStatus').textContent='Salin alamat halaman dari browser.');}else{document.getElementById('shareStatus').textContent='Salin alamat halaman dari browser untuk membagikannya.';}}
+function searchArticle(e){e.preventDefault();const q=document.getElementById('searchInput').value.trim().toLowerCase();const status=document.getElementById('searchStatus');if(!q){status.textContent='Ketik kata yang ingin dicari.';return;}const nodes=[...document.querySelectorAll('article h2,article h3,article p')];const found=nodes.find(n=>n.textContent.toLowerCase().includes(q));if(found){found.scrollIntoView({behavior:'smooth',block:'center'});found.style.outline='2px solid #1597ff';setTimeout(()=>found.style.outline='',1800);status.textContent='Menemukan: '+q;}else status.textContent='Kata itu belum ditemukan di artikel.';}
+const topBtn=document.getElementById('topBtn');window.addEventListener('scroll',()=>{topBtn.style.display=window.scrollY>350?'block':'none';});
+</script>
+</body>
+</html>
